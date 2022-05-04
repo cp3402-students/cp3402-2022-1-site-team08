@@ -1,0 +1,16 @@
+name: Deploy theme to production server
+
+on:
+  pull_request:
+    branches: [production]
+
+jobs:
+  trigger_webhook:
+    runs_on: ubuntu-latest
+
+    steps:
+      - name: Webhook
+        uses: distributhor/workflow-webhook
+        with:
+          url: "https://example.com" # WEBHOOK URL GOES HERE
+          json: '{ "repository": "${{github.event.repository.full_name}}", "number": "${{github.event.number}}", "created_at": "${{github.event.pull_request.created_at}}", "updated_at": "${{github.event.pull_request.updated_at}}" }'
