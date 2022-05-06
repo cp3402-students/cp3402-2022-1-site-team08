@@ -13,4 +13,4 @@ jobs:
         uses: distributhor/workflow-webhook@v2
         env:
           webhook_url: ${{secrets.PRODUCTION_WEBHOOK_URL}}
-          webhook_secret: ""
+          webhook_secret: ${{secrets.PRODUCTION_WEBHOOK_SECRET}}
