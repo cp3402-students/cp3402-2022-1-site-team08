@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package cp3402-group8
+ * @package Townsville_Jazz_Club
  */
 
 get_header();

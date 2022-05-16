@@ -1,4 +1,4 @@
-=== cp3402-group8 ===
+=== Townsville Jazz Club ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,11 +10,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called cp3402-group8.
+A starter theme called Townsville Jazz Club.
 
 == Description ==
 
-Description
+Wordpress theme for the Townsville Jazz Club
 
 == Installation ==
 
@@ -26,7 +26,7 @@ Description
 
 = Does this theme support any plugins? =
 
-cp3402-group8 includes support for WooCommerce and for Infinite Scroll in Jetpack.
+Townsville Jazz Club includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package cp3402-group8
+ * @package Townsville_Jazz_Club
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cp3402-group8' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'cp3402-group8' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'underscores' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'cp3402-group8' ), 'cp3402-group8', '<a href="http://underscores.me/">Underscores.me</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="https://github.com/cp3402-students/cp3402-2022-1-site-team08">group 8</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
