@@ -388,7 +388,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #E8EDDF;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -423,7 +423,7 @@ address {
 }
 
 pre {
-  background: #eee;
+  background: #333533;
   font-family: "Courier 10 Pitch", courier, monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -441,13 +441,13 @@ var {
 
 abbr,
 acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #333533;
   cursor: help;
 }
 
 mark,
 ins {
-  background: #fff9c0;
+  background: #333533;
   text-decoration: none;
 }
 
@@ -458,11 +458,11 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-  background: #fff;
+  background: #242423;
 }
 
 hr {
-  background-color: #ccc;
+  background-color: #333533;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -519,13 +519,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #F5CB5C;
 }
 a:visited {
-  color: #800080;
+  color: #f4c344;
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #f6d374;
 }
 a:focus {
   outline: thin dotted;
@@ -541,9 +541,9 @@ input[type=button],
 input[type=reset],
 input[type=submit] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #333533 #333533 #333533;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #E8EDDF;
   color: rgba(0, 0, 0, 0.8);
   line-height: 1;
   padding: 0.6em 1em 0.4em;
@@ -552,7 +552,7 @@ button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover {
-  border-color: #ccc #bbb #aaa;
+  border-color: #404240 #404240 #404240;
 }
 button:active, button:focus,
 input[type=button]:active,
@@ -561,7 +561,7 @@ input[type=reset]:active,
 input[type=reset]:focus,
 input[type=submit]:active,
 input[type=submit]:focus {
-  border-color: #aaa #bbb #bbb;
+  border-color: #404240 #404240 #404240;
 }
 
 input[type=text],
@@ -580,8 +580,8 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: #CFDBD5;
+  border: 1px solid #333533;
   border-radius: 3px;
   padding: 3px;
 }
@@ -601,11 +601,11 @@ input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
-  color: #111;
+  color: ligthen(#CFDBD5, 5%);
 }
 
 select {
-  border: 1px solid #ccc;
+  border: 1px solid #333533;
 }
 
 textarea {
@@ -862,12 +862,12 @@ textarea {
   word-wrap: normal !important;
 }
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: #333533;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   clip-path: none;
-  color: #21759b;
+  color: #E8EDDF;
   display: block;
   font-size: 0.875rem;
   font-weight: 700;
