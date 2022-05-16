@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package cp3402-group8
+ * @package Townsville_Jazz_Club
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses cp3402_group8_header_style()
+ * @uses underscores_header_style()
  */
-function cp3402_group8_custom_header_setup() {
+function underscores_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'cp3402_group8_custom_header_args',
+			'underscores_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'cp3402_group8_header_style',
+				'wp-head-callback'   => 'underscores_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'cp3402_group8_custom_header_setup' );
+add_action( 'after_setup_theme', 'underscores_custom_header_setup' );
 
-if ( ! function_exists( 'cp3402_group8_header_style' ) ) :
+if ( ! function_exists( 'underscores_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see cp3402_group8_custom_header_setup().
+	 * @see underscores_custom_header_setup().
 	 */
-	function cp3402_group8_header_style() {
+	function underscores_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
