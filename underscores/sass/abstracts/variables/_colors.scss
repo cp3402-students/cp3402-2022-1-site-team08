@@ -8,22 +8,24 @@ $colorOnSecondaryInactive: #CFDBD5;
 $colorOnBackground: $colorOnSecondary;
 
 $color__background-body: $background;
+$color__background-alt: $colorOnSecondary;
 $color__background-screen: $secondary;
 $color__background-hr: $secondary;
 $color__background-button: $colorOnSecondary;
 $color__background-pre: $secondary;
 $color__background-ins: $secondary;
 
+$color__text-alt: $colorOnPrimary;
 $color__text-screen: $colorOnSecondary;
 $color__text-input: $colorOnSecondaryInactive;
-$color__text-input-focus: ligthen($color__text-input, 5%);
+$color__text-input-focus: ligthen($color__text-input, 20%);
 $color__link: $primary;
-$color__link-visited: darken($color__link, 5%);
-$color__link-hover: lighten($color__link, 5%);
+$color__link-visited: darken($color__link, 10%);
+$color__link-hover: lighten($color__link, 20%);
 $color__text-main: $colorOnSecondary;
 
 $color__border-button: $secondary $secondary $secondary;
-$color__border-button-hover: lighten($secondary, 5%) lighten($secondary, 5%) lighten($secondary, 5%);
-$color__border-button-focus: lighten($secondary, 5%) lighten($secondary, 5%) lighten($secondary, 5%);
+$color__border-button-hover: lighten($secondary, 10%) lighten($secondary, 10%) lighten($secondary, 10%);
+$color__border-button-focus: lighten($secondary, 10%) lighten($secondary, 10%) lighten($secondary, 10%);
 $color__border-input: $secondary;
 $color__border-abbr: $secondary;

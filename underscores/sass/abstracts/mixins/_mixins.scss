@@ -9,3 +9,13 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// White space on sides
+@mixin white-space() {
+	$min-padding: 10vw;
+	$max-width: 150vh;
+
+	display: block;
+	padding-left: clamp(100vw - $max-width * 1.5, 100%, $min-padding);
+	padding-right: clamp(100vw - $max-width * 1.5, 100%, $min-padding);
+}

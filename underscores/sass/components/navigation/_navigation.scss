@@ -1,95 +1,107 @@
 .main-navigation {
-	display: block;
-	width: 100%;
+	@include white-space();
+	background: $color__background-alt;
+	padding-top: 1em;
+	padding-bottom: 1em;
 
 	ul {
-		display: none;
+		background: $color__background-alt;
+		display: flex;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			display: none;
 			position: absolute;
 			top: 100%;
-			left: -999em;
+			left: 0;
 			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
+			min-width: 200px;
+			width: 100%;
+			flex-direction: column;
+			border-radius: 5px;
+			overflow: hidden;
 
 			li {
-
-				&:hover > ul,
-				&.focus > ul {
-					display: block;
-					left: auto;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
+				font-size: 0.9em;
+				padding: 10px;
+				border-radius: 0;
+				text-align: left;
 			}
 		}
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			display: inline-flex;
 		}
 	}
 
 	li {
+		width: 100%;
+		flex: 1 0 0;
+		padding: 5px;
 		position: relative;
+		border-radius: 5px;
+		height: 100%;
+		text-align: center;
 
-		&:hover > a,
-		&.focus > a {
+		&:hover {
+			background: lighten($color__background-alt, 5%);
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-	}
+		color: $color__text-alt;
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+		&:hover {
+			color: lighten($color__text-alt, 10%);
+		}
 	}
+}
+
+.menu-toggle {
+	display: none;
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
+@media screen and (max-width: 37.5em) {
 	.menu-toggle {
-		display: none;
+		display: block;
 	}
 
-	.main-navigation ul {
-		display: flex;
+	.main-navigation {
+		&.toggled ul {
+			display: flex;
+			flex-direction: column;
+	
+			li {
+				text-align: left;
+			}
+	
+			ul {
+				margin-left: 10px;
+				position: relative;
+				top: 0;
+				left: 0;
+				width: calc(100% - 10px);
+			}
+		}
+
+		&:not(.toggled) ul {
+			display: none;
+		}
 	}
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
 	.site-main & {
 		margin: 0 0 1.5em;
 	}

@@ -49,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Libre+Baskerville&display=swap");
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -389,7 +390,7 @@ select,
 optgroup,
 textarea {
   color: #E8EDDF;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Libre Baskerville", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -400,6 +401,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Fjalla One", serif;
   clear: both;
 }
 
@@ -424,7 +426,7 @@ address {
 
 pre {
   background: #333533;
-  font-family: "Courier 10 Pitch", courier, monospace;
+  font-family: "courier", monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -436,7 +438,7 @@ code,
 kbd,
 tt,
 var {
-  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-family: "consolas", monospace;
 }
 
 abbr,
@@ -520,12 +522,13 @@ table {
 --------------------------------------------- */
 a {
   color: #F5CB5C;
+  transition: color 0.2s ease;
 }
 a:visited {
-  color: #f4c344;
+  color: #f2bc2c;
 }
 a:hover, a:focus, a:active {
-  color: #f6d374;
+  color: #fbeabc;
 }
 a:focus {
   outline: thin dotted;
@@ -552,7 +555,7 @@ button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 input[type=submit]:hover {
-  border-color: #404240 #404240 #404240;
+  border-color: #4c4f4c #4c4f4c #4c4f4c;
 }
 button:active, button:focus,
 input[type=button]:active,
@@ -561,7 +564,7 @@ input[type=reset]:active,
 input[type=reset]:focus,
 input[type=submit]:active,
 input[type=submit]:focus {
-  border-color: #404240 #404240 #404240;
+  border-color: #4c4f4c #4c4f4c #4c4f4c;
 }
 
 input[type=text],
@@ -601,7 +604,7 @@ input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
-  color: ligthen(#CFDBD5, 5%);
+  color: ligthen(#CFDBD5, 20%);
 }
 
 select {
@@ -622,57 +625,91 @@ textarea {
 --------------------------------------------- */
 .main-navigation {
   display: block;
-  width: 100%;
+  padding-left: clamp(100vw - 225vh, 100%, 10vw);
+  padding-right: clamp(100vw - 225vh, 100%, 10vw);
+  background: #E8EDDF;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .main-navigation ul {
-  display: none;
+  background: #E8EDDF;
+  display: flex;
   list-style: none;
   margin: 0;
   padding-left: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
+  display: none;
   position: absolute;
   top: 100%;
-  left: -999em;
+  left: 0;
   z-index: 99999;
+  min-width: 200px;
+  width: 100%;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  display: block;
-  left: auto;
-}
-.main-navigation ul ul a {
-  width: 200px;
+.main-navigation ul ul li {
+  font-size: 0.9em;
+  padding: 10px;
+  border-radius: 0;
+  text-align: left;
 }
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  display: inline-flex;
 }
 .main-navigation li {
+  width: 100%;
+  flex: 1 0 0;
+  padding: 5px;
   position: relative;
+  border-radius: 5px;
+  height: 100%;
+  text-align: center;
+}
+.main-navigation li:hover {
+  background: #f4f6ef;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
+  color: #242423;
 }
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
+.main-navigation a:hover {
+  color: #3e3e3c;
 }
 
-@media screen and (min-width: 37.5em) {
+.menu-toggle {
+  display: none;
+}
+
+/* Small menu. */
+@media screen and (max-width: 37.5em) {
   .menu-toggle {
-    display: none;
+    display: block;
   }
 
-  .main-navigation ul {
+  .main-navigation.toggled ul {
     display: flex;
+    flex-direction: column;
+  }
+  .main-navigation.toggled ul li {
+    text-align: left;
+  }
+  .main-navigation.toggled ul ul {
+    margin-left: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px);
+  }
+  .main-navigation:not(.toggled) ul {
+    display: none;
   }
 }
 .site-main .comment-navigation,
