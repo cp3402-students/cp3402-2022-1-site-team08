@@ -1,33 +1,36 @@
 .main-navigation {
 	@include white-space();
-	//background: $color__background-alt;
-	background: red;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	background: $color__background-alt;
+	padding-top: 0;
+	padding-bottom: 0;
+
 
 	ul {
-		//background: $color__background-alt;
-		background: red;
+		background: $color__background-alt;
 		display: flex;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 0;
+
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		vertical-align: middle;
 
+		/* Sub navigation menu */
 		ul {
+			width:100%;
 			display: none;
 			position: absolute;
 			top: 100%;
 			left: 0;
 			z-index: 99999;
 			min-width: 200px;
-			width: 100%;
 			flex-direction: column;
 			border-radius: 5px;
 			overflow: hidden;
 
+			/* Sub navigation menu */
 			li {
 				font-size: 0.9em;
 				padding: 10px;
@@ -39,17 +42,18 @@
 		li:hover > ul,
 		li.focus > ul {
 			display: inline-flex;
+
 		}
 	}
 
 	li {
-		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		flex: 1 0 0;
-		padding: 5px;
 		position: relative;
 		border-radius: 5px;
-		height: 100%;
 		text-align: center;
+		vertical-align: middle;
 
 		&:hover {
 			background: lighten($color__background-alt, 5%);
@@ -57,7 +61,6 @@
 	}
 
 	a {
-		display: block;
 		text-decoration: none;
 		color: $color__text-alt;
 
@@ -69,6 +72,33 @@
 
 .menu-toggle {
 	display: none;
+}
+
+/* Navbar scaling */
+@media screen and (max-width: 110em) {
+
+	a {
+		font-size: $font__size-navbar-default * 0.8;
+	}
+}
+
+@media screen and (max-width: 100em) {
+
+	a {
+		font-size: $font__size-navbar-default * 0.6;
+	}
+}
+
+@media screen and (max-width: 65em) {
+	a {
+		font-size: $font__size-navbar-default * 0.5;
+	}
+}
+
+@media screen and (max-width: 50em) {
+	a {
+		font-size: $font__size-navbar-default * 0.40;
+	}
 }
 
 /* Small menu. */

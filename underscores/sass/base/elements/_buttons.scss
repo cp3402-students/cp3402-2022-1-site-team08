@@ -1,17 +1,20 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
+input[type="submit"],
+.wp-block-button__link{
+	border: 2px solid;
 	border-color: $color__border-button;
-	border-radius: 3px;
-	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
+	border-radius: 10px;
+	background: $primary;
+	color: $color__text-alt;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 15px 25px;
 
 	&:hover {
-		border-color: $color__border-button-hover;
+		border-color: $color__border-button-focus;
+		background-color: $color__link-hover;
+		color: $color__text-alt;
 	}
 
 	&:active,
