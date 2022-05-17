@@ -1,11 +1,13 @@
 .main-navigation {
 	@include white-space();
-	background: $color__background-alt;
+	//background: $color__background-alt;
+	background: red;
 	padding-top: 1em;
 	padding-bottom: 1em;
 
 	ul {
-		background: $color__background-alt;
+		//background: $color__background-alt;
+		background: red;
 		display: flex;
 		list-style: none;
 		margin: 0;
