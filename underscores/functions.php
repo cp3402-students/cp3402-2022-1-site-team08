@@ -1,10 +1,10 @@
 <?php
 /**
- * cp3402-group8 functions and definitions
+ * Townsville Jazz Club functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package cp3402-group8
+ * @package Townsville_Jazz_Club
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -19,14 +19,14 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function cp3402_group8_setup() {
+function underscores_setup() {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on cp3402-group8, use a find and replace
-		* to change 'cp3402-group8' to the name of your theme in all the template files.
+		* If you're building a theme based on Townsville Jazz Club, use a find and replace
+		* to change 'underscores' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'cp3402-group8', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'underscores', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -49,7 +49,7 @@ function cp3402_group8_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'cp3402-group8' ),
+			'menu-1' => esc_html__( 'Primary', 'underscores' ),
 		)
 	);
 
@@ -74,7 +74,7 @@ function cp3402_group8_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'cp3402_group8_custom_background_args',
+			'underscores_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -100,7 +100,7 @@ function cp3402_group8_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'cp3402_group8_setup' );
+add_action( 'after_setup_theme', 'underscores_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +109,22 @@ add_action( 'after_setup_theme', 'cp3402_group8_setup' );
  *
  * @global int $content_width
  */
-function cp3402_group8_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'cp3402_group8_content_width', 640 );
+function underscores_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'underscores_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'cp3402_group8_content_width', 0 );
+add_action( 'after_setup_theme', 'underscores_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function cp3402_group8_widgets_init() {
+function underscores_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'cp3402-group8' ),
+			'name'          => esc_html__( 'Sidebar', 'underscores' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'cp3402-group8' ),
+			'description'   => esc_html__( 'Add widgets here.', 'underscores' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,22 +132,22 @@ function cp3402_group8_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'cp3402_group8_widgets_init' );
+add_action( 'widgets_init', 'underscores_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function cp3402_group8_scripts() {
-	wp_enqueue_style( 'cp3402-group8-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'cp3402-group8-style', 'rtl', 'replace' );
+function underscores_scripts() {
+	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'underscores-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'cp3402-group8-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'underscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'cp3402_group8_scripts' );
+add_action( 'wp_enqueue_scripts', 'underscores_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -175,4 +175,18 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+function wpb_widgets_init() {
+
+    register_sidebar( array(
+        'name'          => 'Custom Header Widget Area',
+        'id'            => 'custom-header-widget',
+        'before_widget' => '<div class="chw-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="chw-title">',
+        'after_title'   => '</h2>',
+    ) );
+
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
 

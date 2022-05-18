@@ -1,0 +1,32 @@
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+
+	& > * {
+		@include white-space();
+	}
+}
+
+.page-links {
+	text-decoration: none;
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+a{
+	text-decoration: none;
+}

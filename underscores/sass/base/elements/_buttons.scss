@@ -1,0 +1,24 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.wp-block-button__link{
+	border: 2px solid;
+	border-color: $color__border-button;
+	border-radius: 10px;
+	background: $primary;
+	color: $color__text-alt;
+	line-height: 1;
+	padding: 15px 25px;
+
+	&:hover {
+		border-color: $color__border-button-focus;
+		background-color: $color__link-hover;
+		color: $color__text-alt;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
