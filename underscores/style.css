@@ -464,12 +464,25 @@ body {
   background: #131313;
 }
 
-.custom-logo-link img {
-  max-width: 300px;
-}
-
 .site-header {
   text-align: center;
+}
+.site-header .site-branding {
+  padding-left: clamp(100vw - 225vh, 100%, 10vw);
+  padding-right: clamp(100vw - 225vh, 100%, 10vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .site-branding .chw-widget {
+  display: flex;
+  align-items: center;
+}
+.site-header .site-branding .chw-widget ul {
+  margin: 0;
+}
+.site-header .custom-logo-link img {
+  max-width: 300px;
 }
 
 footer {
