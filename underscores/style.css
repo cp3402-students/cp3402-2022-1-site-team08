@@ -402,6 +402,7 @@ h4,
 h5,
 h6 {
   font-family: "Fjalla One", serif;
+  color: #74b9ff;
   clear: both;
 }
 
@@ -460,7 +461,35 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-  background: #242423;
+  background: #131313;
+}
+
+.site-header {
+  text-align: center;
+}
+.site-header .site-branding {
+  padding-left: clamp(100vw - 225vh, 100%, 10vw);
+  padding-right: clamp(100vw - 225vh, 100%, 10vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .site-branding .chw-widget {
+  display: flex;
+  align-items: center;
+}
+.site-header .site-branding .chw-widget ul {
+  margin: 0;
+}
+.site-header .custom-logo-link img {
+  max-width: 300px;
+}
+
+footer {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr {
@@ -521,14 +550,14 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #F5CB5C;
+  color: #74b9ff;
   transition: color 0.2s ease;
 }
 a:visited {
-  color: #f2bc2c;
+  color: #419fff;
 }
 a:hover, a:focus, a:active {
-  color: #fbeabc;
+  color: #daecff;
 }
 a:focus {
   outline: thin dotted;
@@ -542,20 +571,24 @@ a:hover, a:active {
 button,
 input[type=button],
 input[type=reset],
-input[type=submit] {
-  border: 1px solid;
+input[type=submit],
+.wp-block-button__link {
+  border: 2px solid;
   border-color: #333533 #333533 #333533;
-  border-radius: 3px;
-  background: #E8EDDF;
-  color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  background: #74b9ff;
+  color: #131313;
   line-height: 1;
-  padding: 0.6em 1em 0.4em;
+  padding: 15px 25px;
 }
 button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+.wp-block-button__link:hover {
   border-color: #4c4f4c #4c4f4c #4c4f4c;
+  background-color: #daecff;
+  color: #131313;
 }
 button:active, button:focus,
 input[type=button]:active,
@@ -563,7 +596,9 @@ input[type=button]:focus,
 input[type=reset]:active,
 input[type=reset]:focus,
 input[type=submit]:active,
-input[type=submit]:focus {
+input[type=submit]:focus,
+.wp-block-button__link:active,
+.wp-block-button__link:focus {
   border-color: #4c4f4c #4c4f4c #4c4f4c;
 }
 
@@ -604,7 +639,7 @@ input[type=datetime]:focus,
 input[type=datetime-local]:focus,
 input[type=color]:focus,
 textarea:focus {
-  color: ligthen(#CFDBD5, 20%);
+  color: white;
 }
 
 select {
@@ -624,12 +659,11 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-  display: block;
   padding-left: clamp(100vw - 225vh, 100%, 10vw);
   padding-right: clamp(100vw - 225vh, 100%, 10vw);
   background: #E8EDDF;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .main-navigation ul {
   background: #E8EDDF;
@@ -637,9 +671,7 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
 }
 .main-navigation ul ul {
   display: none;
@@ -655,8 +687,10 @@ textarea {
 }
 .main-navigation ul ul li {
   font-size: 0.9em;
-  padding: 10px;
   border-radius: 0;
+}
+.main-navigation ul ul li a {
+  justify-content: flex-start;
   text-align: left;
 }
 .main-navigation ul li:hover > ul,
@@ -665,23 +699,23 @@ textarea {
 }
 .main-navigation li {
   width: 100%;
-  flex: 1 0 0;
-  padding: 5px;
-  position: relative;
   border-radius: 5px;
-  height: 100%;
-  text-align: center;
+  position: relative;
 }
 .main-navigation li:hover {
   background: #f4f6ef;
 }
 .main-navigation a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   text-decoration: none;
-  color: #242423;
+  padding: 10px 5px;
+  color: #131313;
 }
 .main-navigation a:hover {
-  color: #3e3e3c;
+  color: #2d2d2d;
 }
 
 .menu-toggle {
@@ -752,12 +786,23 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0;
+  margin: 0;
+}
+.page-content > *,
+.entry-content > *,
+.entry-summary > * {
+  padding-left: clamp(100vw - 225vh, 100%, 10vw);
+  padding-right: clamp(100vw - 225vh, 100%, 10vw);
 }
 
 .page-links {
+  text-decoration: none;
   clear: both;
   margin: 0 0 1.5em;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Comments

@@ -1,8 +1,8 @@
 .main-navigation {
 	@include white-space();
 	background: $color__background-alt;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 
 	ul {
 		background: $color__background-alt;
@@ -10,9 +10,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
+		align-items: stretch;
 
 		ul {
 			display: none;
@@ -28,26 +26,25 @@
 
 			li {
 				font-size: 0.9em;
-				padding: 10px;
 				border-radius: 0;
-				text-align: left;
+
+				a {
+					justify-content: flex-start;
+					text-align: left;
+				}
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
+		li:hover>ul,
+		li.focus>ul {
 			display: inline-flex;
 		}
 	}
 
 	li {
 		width: 100%;
-		flex: 1 0 0;
-		padding: 5px;
-		position: relative;
 		border-radius: 5px;
-		height: 100%;
-		text-align: center;
+		position: relative;
 
 		&:hover {
 			background: lighten($color__background-alt, 5%);
@@ -55,8 +52,12 @@
 	}
 
 	a {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
 		text-decoration: none;
+		padding: 10px 5px;
 		color: $color__text-alt;
 
 		&:hover {
@@ -79,11 +80,11 @@
 		&.toggled ul {
 			display: flex;
 			flex-direction: column;
-	
+
 			li {
 				text-align: left;
 			}
-	
+
 			ul {
 				margin-left: 10px;
 				position: relative;

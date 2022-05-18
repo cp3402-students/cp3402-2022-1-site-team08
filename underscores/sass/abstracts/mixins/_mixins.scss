@@ -15,7 +15,6 @@
 	$min-padding: 10vw;
 	$max-width: 150vh;
 
-	display: block;
 	padding-left: clamp(100vw - $max-width * 1.5, 100%, $min-padding);
 	padding-right: clamp(100vw - $max-width * 1.5, 100%, $min-padding);
 }

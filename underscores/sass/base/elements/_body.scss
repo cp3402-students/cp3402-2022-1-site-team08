@@ -1,3 +1,38 @@
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
 }
+
+.site-header {
+	text-align: center;
+
+	.site-branding{
+		@include white-space();
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.chw-widget {
+			display: flex;
+			align-items: center;
+
+			ul {
+				margin: 0;
+			}
+		}
+	}
+
+	.custom-logo-link {
+
+		img{
+			max-width: 300px;
+		}
+	}
+
+}
+
+footer {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
