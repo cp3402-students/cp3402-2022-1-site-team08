@@ -649,8 +649,8 @@ textarea {
   padding-left: clamp(100vw - 225vh, 100%, 10vw);
   padding-right: clamp(100vw - 225vh, 100%, 10vw);
   background: #E8EDDF;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .main-navigation ul {
   background: #E8EDDF;
@@ -674,8 +674,10 @@ textarea {
 }
 .main-navigation ul ul li {
   font-size: 0.9em;
-  padding: 10px;
   border-radius: 0;
+}
+.main-navigation ul ul li a {
+  justify-content: flex-start;
   text-align: left;
 }
 .main-navigation ul li:hover > ul,
@@ -683,21 +685,20 @@ textarea {
   display: inline-flex;
 }
 .main-navigation li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  padding: 5px;
   border-radius: 5px;
-  text-align: center;
   position: relative;
 }
 .main-navigation li:hover {
   background: #f4f6ef;
 }
 .main-navigation a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   text-decoration: none;
+  padding: 10px 5px;
   color: #131313;
 }
 .main-navigation a:hover {
