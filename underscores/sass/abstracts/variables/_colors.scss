@@ -1,7 +1,8 @@
 // Colours come from https://coolors.co/palette/cfdbd5-e8eddf-f5cb5c-242423-333533
 $primary: #F5CB5C;
 $secondary: #333533;
-$background: #242423;
+//$background: #242423;
+$background: #131313;
 $colorOnPrimary: $background;
 $colorOnSecondary: #E8EDDF;
 $colorOnSecondaryInactive: #CFDBD5;
@@ -11,14 +12,15 @@ $color__background-body: $background;
 $color__background-alt: $colorOnSecondary;
 $color__background-screen: $secondary;
 $color__background-hr: $secondary;
-$color__background-button: $colorOnSecondary;
+//$color__background-button: $colorOnSecondary;
+$color__background-button: $primary;
 $color__background-pre: $secondary;
 $color__background-ins: $secondary;
 
 $color__text-alt: $colorOnPrimary;
 $color__text-screen: $colorOnSecondary;
 $color__text-input: $colorOnSecondaryInactive;
-$color__text-input-focus: ligthen($color__text-input, 20%);
+$color__text-input-focus: lighten($color__text-input, 20%);
 $color__link: $primary;
 $color__link-visited: darken($color__link, 10%);
 $color__link-hover: lighten($color__link, 20%);
