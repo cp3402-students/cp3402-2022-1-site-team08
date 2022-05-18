@@ -464,6 +464,14 @@ body {
   background: #131313;
 }
 
+.custom-logo-link img {
+  max-width: 300px;
+}
+
+header {
+  text-align: center;
+}
+
 hr {
   background-color: #333533;
   border: 0;
@@ -696,27 +704,6 @@ textarea {
   display: none;
 }
 
-/* Navbar scaling */
-@media screen and (max-width: 110em) {
-  a {
-    font-size: 12.8px;
-  }
-}
-@media screen and (max-width: 100em) {
-  a {
-    font-size: 9.6px;
-  }
-}
-@media screen and (max-width: 65em) {
-  a {
-    font-size: 8px;
-  }
-}
-@media screen and (max-width: 50em) {
-  a {
-    font-size: 6.4px;
-  }
-}
 /* Small menu. */
 @media screen and (max-width: 37.5em) {
   .menu-toggle {

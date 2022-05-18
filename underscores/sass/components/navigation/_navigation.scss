@@ -74,33 +74,6 @@
 	display: none;
 }
 
-/* Navbar scaling */
-@media screen and (max-width: 110em) {
-
-	a {
-		font-size: $font__size-navbar-default * 0.8;
-	}
-}
-
-@media screen and (max-width: 100em) {
-
-	a {
-		font-size: $font__size-navbar-default * 0.6;
-	}
-}
-
-@media screen and (max-width: 65em) {
-	a {
-		font-size: $font__size-navbar-default * 0.5;
-	}
-}
-
-@media screen and (max-width: 50em) {
-	a {
-		font-size: $font__size-navbar-default * 0.40;
-	}
-}
-
 /* Small menu. */
 @media screen and (max-width: 37.5em) {
 	.menu-toggle {
