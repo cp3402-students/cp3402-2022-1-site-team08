@@ -468,7 +468,7 @@ body {
   max-width: 300px;
 }
 
-header {
+.site-header {
   text-align: center;
 }
 
@@ -649,33 +649,28 @@ textarea {
   padding-left: clamp(100vw - 225vh, 100%, 10vw);
   padding-right: clamp(100vw - 225vh, 100%, 10vw);
   background: #E8EDDF;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .main-navigation ul {
   background: #E8EDDF;
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  /* Sub navigation menu */
+  padding-left: 0;
+  align-items: stretch;
 }
 .main-navigation ul ul {
-  width: 100%;
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   z-index: 99999;
   min-width: 200px;
+  width: 100%;
   flex-direction: column;
   border-radius: 5px;
   overflow: hidden;
-  /* Sub navigation menu */
 }
 .main-navigation ul ul li {
   font-size: 0.9em;
@@ -688,18 +683,20 @@ textarea {
   display: inline-flex;
 }
 .main-navigation li {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  flex: 1 0 0;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
   border-radius: 5px;
   text-align: center;
-  vertical-align: middle;
+  position: relative;
 }
 .main-navigation li:hover {
   background: #f4f6ef;
 }
 .main-navigation a {
+  display: block;
   text-decoration: none;
   color: #131313;
 }

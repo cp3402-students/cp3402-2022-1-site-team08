@@ -1,36 +1,29 @@
 .main-navigation {
 	@include white-space();
 	background: $color__background-alt;
-	padding-top: 0;
-	padding-bottom: 0;
-
+	padding-top: 1em;
+	padding-bottom: 1em;
 
 	ul {
 		background: $color__background-alt;
 		display: flex;
 		list-style: none;
 		margin: 0;
-		padding: 0;
+		padding-left: 0;
+		align-items: stretch;
 
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		vertical-align: middle;
-
-		/* Sub navigation menu */
 		ul {
-			width:100%;
 			display: none;
 			position: absolute;
 			top: 100%;
 			left: 0;
 			z-index: 99999;
 			min-width: 200px;
+			width: 100%;
 			flex-direction: column;
 			border-radius: 5px;
 			overflow: hidden;
 
-			/* Sub navigation menu */
 			li {
 				font-size: 0.9em;
 				padding: 10px;
@@ -39,21 +32,21 @@
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
+		li:hover>ul,
+		li.focus>ul {
 			display: inline-flex;
-
 		}
 	}
 
 	li {
-		padding-top: 5px;
-		padding-bottom: 5px;
-		flex: 1 0 0;
-		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 5px;
 		border-radius: 5px;
 		text-align: center;
-		vertical-align: middle;
+		position: relative;
 
 		&:hover {
 			background: lighten($color__background-alt, 5%);
@@ -61,6 +54,7 @@
 	}
 
 	a {
+		display: block;
 		text-decoration: none;
 		color: $color__text-alt;
 
@@ -84,11 +78,11 @@
 		&.toggled ul {
 			display: flex;
 			flex-direction: column;
-	
+
 			li {
 				text-align: left;
 			}
-	
+
 			ul {
 				margin-left: 10px;
 				position: relative;
