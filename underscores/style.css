@@ -402,7 +402,7 @@ h4,
 h5,
 h6 {
   font-family: "Fjalla One", serif;
-  color: #74b9ff;
+  color: #F5CB5C;
   clear: both;
 }
 
@@ -550,14 +550,14 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #74b9ff;
+  color: #F5CB5C;
   transition: color 0.2s ease;
 }
 a:visited {
-  color: #419fff;
+  color: #f2bc2c;
 }
 a:hover, a:focus, a:active {
-  color: #daecff;
+  color: #fbeabc;
 }
 a:focus {
   outline: thin dotted;
@@ -576,7 +576,7 @@ input[type=submit],
   border: 2px solid;
   border-color: #333533 #333533 #333533;
   border-radius: 10px;
-  background: #74b9ff;
+  background: #F5CB5C;
   color: #131313;
   line-height: 1;
   padding: 15px 25px;
@@ -587,7 +587,7 @@ input[type=reset]:hover,
 input[type=submit]:hover,
 .wp-block-button__link:hover {
   border-color: #4c4f4c #4c4f4c #4c4f4c;
-  background-color: #daecff;
+  background-color: #fbeabc;
   color: #131313;
 }
 button:active, button:focus,
