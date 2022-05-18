@@ -390,7 +390,7 @@ select,
 optgroup,
 textarea {
   color: #E8EDDF;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: "Fjalla One", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -461,6 +461,13 @@ big {
 --------------------------------------------- */
 body {
   background: #242423;
+}
+
+footer {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr {
