@@ -31,6 +31,7 @@
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
+
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
 			else :
@@ -43,6 +44,16 @@
 				?>
 				<p class="site-description"><?php echo $underscores_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
+
+            <?php
+
+            if ( is_active_sidebar( 'custom-header-widget' ) ) : ?>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                    <?php dynamic_sidebar( 'custom-header-widget' ); ?>
+                </div>
+
+            <?php endif; ?>
+            
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
