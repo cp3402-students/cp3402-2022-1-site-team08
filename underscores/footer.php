@@ -13,17 +13,39 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>">
+
+
+			<a href="<?php echo esc_url( __( 'http://localhost/wordpress/', 'home' ) ); ?>">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'underscores' ), 'WordPress' );
+				printf( "Home" ) ;
 				?>
 			</a>
-			<span class="sep"> | </span>
+			<span class="sep">|</span>
+			<a href="<?php echo esc_url( __( 'http://localhost/wordpress/memebership/', 'membership' ) ); ?>">
+				<?php
+				printf( "Contact" ) ;
+				?>
+			</a>
+			<span class="sep">|</span>
+			<a href="<?php echo esc_url( __( 'http://localhost/events/', 'events' ) ); ?>">
+				<?php
+				printf( "Events" ) ;
+				?>
+			</a>
+			<span class="sep">|</span>
+			<a href="<?php echo esc_url( __( 'http://localhost/about-us/', 'about us' ) ); ?>">
+				<?php
+				printf( "About Us" ) ;
+				?>
+			</a>
+			<br>
+					
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="https://github.com/cp3402-students/cp3402-2022-1-site-team08">group 8</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="https://github.com/cp3402-students/cp3402-2022-1-site-team08">group 8 </a>' );
 				?>
+
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
