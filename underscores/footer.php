@@ -38,14 +38,7 @@
 				printf( "About Us" ) ;
 				?>
 			</a>
-			<br>
-					
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="https://github.com/cp3402-students/cp3402-2022-1-site-team08">group 8 </a>' );
-				?>
-
-
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

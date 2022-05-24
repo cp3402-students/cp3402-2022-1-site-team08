@@ -485,19 +485,6 @@ body {
   max-width: 300px;
 }
 
-footer {
-  font-size: 1rem;
-  color: #131313;
-  display: flex;
-  justify-content: center;
-  background-color: #E8EDDF;
-  border-top: 1px solid;
-  padding: 1rem 0;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 hr {
   background-color: #333533;
   border: 0;
@@ -551,6 +538,36 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+}
+
+.no-widgets .site-footer {
+  margin-top: 0;
+}
+
+footer {
+  font-size: 1rem;
+  color: #131313;
+  display: flex;
+  justify-content: center;
+  background-color: #E8EDDF;
+  border-top: 1px solid;
+  padding: 1rem 0;
+  margin-right: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer :not(:last-child) {
+  margin-right: 3rem;
+}
+footer :last-child {
+  text-align: justify;
+}
+footer a {
+  color: #131313;
+  transition: color 0.2s ease;
+}
+footer a:visited {
+  color: #131313;
 }
 
 /* Links

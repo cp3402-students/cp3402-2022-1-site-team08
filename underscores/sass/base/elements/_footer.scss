@@ -1,0 +1,34 @@
+.no-widgets .site-footer { margin-top: 0; } // removes entry footer
+
+footer {
+   
+	font-size: 1rem;
+	color: $background;
+	display: flex;
+	justify-content: center;
+	background-color: $colorOnBackground;
+	border-top: 1px solid; // border not really visible
+	padding: 1rem 0;
+	margin-right: 3rem;
+
+	:not(:last-child) {
+		margin-right: 3rem;
+	}
+	:last-child {
+		text-align: justify;
+	}
+
+    margin-left: auto; // banner margin
+    margin-right: auto;
+
+	
+	
+	a {
+		color: $background;
+		transition: color 0.2s ease;
+	}
+
+	a:visited {
+		color: $background;
+	}
+}
