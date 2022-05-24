@@ -14,28 +14,21 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 
-
-			<a href="<?php echo esc_url( __( 'http://localhost/wordpress/', 'home' ) ); ?>">
-				<?php
-				printf( "Home" ) ;
-				?>
-			</a>
-			<span class="sep">|</span>
 			<a href="<?php echo esc_url( __( 'http://localhost/wordpress/memebership/', 'membership' ) ); ?>">
 				<?php
-				printf( "Contact" ) ;
+				printf( "Membership" ) ;
 				?>
 			</a>
 			<span class="sep">|</span>
-			<a href="<?php echo esc_url( __( 'http://localhost/events/', 'events' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'http://localhost/wordpress/events/', 'events' ) ); ?>">
 				<?php
 				printf( "Events" ) ;
 				?>
 			</a>
 			<span class="sep">|</span>
-			<a href="<?php echo esc_url( __( 'http://localhost/about-us/', 'about us' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'http://localhost/wordpress/about-us/', 'about us' ) ); ?>">
 				<?php
-				printf( "About Us" ) ;
+				printf( "About us" ) ;
 				?>
 			</a>
 			
