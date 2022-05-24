@@ -3,32 +3,36 @@
 footer {
    
 	font-size: 1rem;
-	color: $background;
+	color: $background; // span & border color
 	display: flex;
 	justify-content: center;
-	background-color: $colorOnBackground;
-	border-top: 1px solid; // border not really visible
+	background-color: $colorOnBackground; // banner color
+	border-top: 1px solid $background; // border not really visible
 	padding: 1rem 0;
 	margin-right: 3rem;
 
+    a:link {
+        color: $background;
+      }
+      
+      /* visited link */
+      a:visited {
+        color: $background;
+      }
+      
+      /* mouse over link */
+      a:hover {
+        color: $secondary;
+        text-decoration: underline;
+
+      }
+     
+    
 	:not(:last-child) {
 		margin-right: 3rem;
-	}
-	:last-child {
-		text-align: justify;
-	}
+	}	
 
     margin-left: auto; // banner margin
     margin-right: auto;
 
-	
-	
-	a {
-		color: $background;
-		transition: color 0.2s ease;
-	}
-
-	a:visited {
-		color: $background;
-	}
 }
