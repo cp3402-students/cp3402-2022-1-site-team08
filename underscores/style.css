@@ -402,7 +402,7 @@ h4,
 h5,
 h6 {
   font-family: "Fjalla One", serif;
-  color: #74b9ff;
+  color: #F5CB5C;
   clear: both;
 }
 
@@ -485,13 +485,6 @@ body {
   max-width: 300px;
 }
 
-footer {
-  display: table;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 hr {
   background-color: #333533;
   border: 0;
@@ -547,17 +540,52 @@ table {
   width: 100%;
 }
 
+.no-widgets, .entry-footer {
+  display: none;
+}
+
+footer {
+  padding-left: clamp(100vw - 225vh, 100%, 10vw);
+  padding-right: clamp(100vw - 225vh, 100%, 10vw);
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+  background: #E8EDDF;
+}
+footer div.custom-menu-class ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer div.custom-menu-class ul li {
+  display: inline-block;
+  /* visited link */
+  /* mouse over link */
+}
+footer div.custom-menu-class ul li a:link {
+  display: inline-block;
+  color: #131313;
+  padding: 0 1rem;
+  transition: color 0.2s ease;
+}
+footer div.custom-menu-class ul li a:visited {
+  color: #131313;
+}
+footer div.custom-menu-class ul li a:hover {
+  color: #333533;
+}
+
 /* Links
 --------------------------------------------- */
 a {
-  color: #74b9ff;
+  color: #F5CB5C;
   transition: color 0.2s ease;
 }
 a:visited {
-  color: #419fff;
+  color: #f2bc2c;
 }
 a:hover, a:focus, a:active {
-  color: #daecff;
+  color: #fbeabc;
 }
 a:focus {
   outline: thin dotted;
@@ -576,7 +604,7 @@ input[type=submit],
   border: 2px solid;
   border-color: #333533 #333533 #333533;
   border-radius: 10px;
-  background: #74b9ff;
+  background: #F5CB5C;
   color: #131313;
   line-height: 1;
   padding: 15px 25px;
@@ -587,7 +615,7 @@ input[type=reset]:hover,
 input[type=submit]:hover,
 .wp-block-button__link:hover {
   border-color: #4c4f4c #4c4f4c #4c4f4c;
-  background-color: #daecff;
+  background-color: #fbeabc;
   color: #131313;
 }
 button:active, button:focus,
