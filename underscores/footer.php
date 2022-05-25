@@ -12,12 +12,19 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">			
+		<div class="site-info">
+						
 		</div><!-- .site-info -->
+
+		<?php
+		wp_nav_menu( array( 
+			'theme_location' => 'my-custom-menu', 
+			'container_class' => 'custom-menu-class' ) ); 
+		?>
+
+		<?php wp_footer(); ?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
-<?php wp_footer(); ?>
 
 </body>
 </html>

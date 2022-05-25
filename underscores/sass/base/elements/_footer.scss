@@ -1,29 +1,40 @@
-.no-widgets .site-footer { margin-top: 0; } // removes entry footer
+.no-widgets, .entry-footer { display: none; } // removes entry footer
 
 footer {
    @include white-space();
-	font-size: 1rem;
-	color: $background; // span & border color
-	text-align: center;
-	background-color: $colorOnBackground; // banner color
-	border-top: 1px solid $background; // border not really visible
-	padding: 1rem 0;
+  div.custom-menu-class ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-    a:link {
+    li {
       display: inline-block;
-        color: $background;
-        padding: 0 1rem;
-        transition: color 0.2s ease;
-      }
-      
-      /* visited link */
-      a:visited {
-        color: $background;
-      }
-      
-      /* mouse over link */
-      a:hover {
-        color: $secondary;
-      }
+
+      a:link {
+        display: inline-block;
+          color: $background;
+          padding: 0 1rem;
+          transition: color 0.2s ease;
+        }
+        
+        /* visited link */
+        a:visited {
+          color: $background;
+        }
+        
+        /* mouse over link */
+        a:hover {
+          color: $secondary;
+        }
+    }
+  }
+
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+  background: $colorOnBackground;
+
+    
+
 
 }

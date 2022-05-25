@@ -540,32 +540,38 @@ table {
   width: 100%;
 }
 
-.no-widgets .site-footer {
-  margin-top: 0;
+.no-widgets, .entry-footer {
+  display: none;
 }
 
 footer {
   padding-left: clamp(100vw - 225vh, 100%, 10vw);
   padding-right: clamp(100vw - 225vh, 100%, 10vw);
   font-size: 1rem;
-  color: #131313;
   text-align: center;
-  background-color: #E8EDDF;
-  border-top: 1px solid #131313;
   padding: 1rem 0;
+  background: #E8EDDF;
+}
+footer div.custom-menu-class ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+footer div.custom-menu-class ul li {
+  display: inline-block;
   /* visited link */
   /* mouse over link */
 }
-footer a:link {
+footer div.custom-menu-class ul li a:link {
   display: inline-block;
   color: #131313;
   padding: 0 1rem;
   transition: color 0.2s ease;
 }
-footer a:visited {
+footer div.custom-menu-class ul li a:visited {
   color: #131313;
 }
-footer a:hover {
+footer div.custom-menu-class ul li a:hover {
   color: #333533;
 }
 
