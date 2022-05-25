@@ -545,31 +545,28 @@ table {
 }
 
 footer {
+  padding-left: clamp(100vw - 225vh, 100%, 10vw);
+  padding-right: clamp(100vw - 225vh, 100%, 10vw);
   font-size: 1rem;
   color: #131313;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   background-color: #E8EDDF;
   border-top: 1px solid #131313;
   padding: 1rem 0;
-  margin-right: 3rem;
   /* visited link */
   /* mouse over link */
-  margin-left: auto;
-  margin-right: auto;
 }
 footer a:link {
+  display: inline-block;
   color: #131313;
+  padding: 0 1rem;
+  transition: color 0.2s ease;
 }
 footer a:visited {
   color: #131313;
 }
 footer a:hover {
   color: #333533;
-  text-decoration: underline;
-}
-footer :not(:last-child) {
-  margin-right: 3rem;
 }
 
 /* Links
