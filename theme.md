@@ -15,10 +15,13 @@ These files include:
 **footer.scss** – Added code to style custom navigation menu
  
 **Relevant information about what features your theme has**
+
 We added a custom menu to the footer. We also included widgets to header to allow for social media integration.
 
 **Design decisions**
+
 The design of the site was selected after the team voted on mock-up pages a member created. We then followed the style of the mock up but added extra content where we felt necessary.
 
 **Colours**
+
 The site colour palette we employed was based off one of our mock-ups. The colour combinations included are within the sass file Abstracts/variables/_colors.scss.
