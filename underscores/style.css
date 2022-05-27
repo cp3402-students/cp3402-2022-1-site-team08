@@ -607,7 +607,7 @@ input[type=submit],
   background: #F5CB5C;
   color: #131313;
   line-height: 1;
-  padding: 15px 25px;
+  padding: 15px 25px !important;
 }
 button:hover,
 input[type=button]:hover,
@@ -951,6 +951,19 @@ a {
 /* Re-display the Theme Footer when Infinite Scroll has reached its end. */
 .infinity-end.neverending .site-footer {
   display: block;
+}
+
+/* The Events Calendar
+--------------------------------------------- */
+.tribe-events-c-top-bar__nav-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tribe-events-calendar-list__event-title-link {
+  color: #f2bc2c !important;
+  font-family: "Libre Baskerville", sans-serif;
 }
 
 /*--------------------------------------------------------------
