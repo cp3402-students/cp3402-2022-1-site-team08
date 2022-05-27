@@ -4,7 +4,9 @@ This project incorporates a starter theme called underscores. The theme provided
 
 These files include:
 **footer.php** – Added code to specify where menu should be placed.
+
 **functions.php** – Added code to access custom navigation menu.
+
 **functions.php**- Added code to include widget in haeder
 
 The group additionally employed SASS to style our theme. Incorporating SASS introduced another file structure into the themes project folder. Within Sass, the group had access to files required to manipulate and style the theme. 
