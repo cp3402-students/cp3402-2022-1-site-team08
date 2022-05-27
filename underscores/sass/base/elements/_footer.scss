@@ -1,40 +1,49 @@
-.no-widgets, .entry-footer { display: none; } // removes entry footer
+.no-widgets, .entry-footer {
+  display: none;
+}
 
 footer {
-   @include white-space();
+  @include white-space();
+
   div.custom-menu-class ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 
     li {
-      display: inline-block;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      border-radius: 5px;
+
+      &:hover {
+        background: lighten($color__background-alt, 10%);
+      }
 
       a:link {
-        display: inline-block;
-          color: $background;
-          padding: 0 1rem;
-          transition: color 0.2s ease;
-        }
-        
-        /* visited link */
-        a:visited {
-          color: $background;
-        }
-        
-        /* mouse over link */
-        a:hover {
-          color: $secondary;
-        }
+        color: $background;
+        padding: 0 1rem;
+        transition: color 0.2s ease;
+      }
+
+      /* visited link */
+      a:visited {
+        color: $background;
+      }
+
+      /* mouse over link */
+      a:hover {
+        color: $secondary;
+      }
     }
   }
 
   font-size: 1rem;
   text-align: center;
   padding: 1rem 0;
-  background: $colorOnBackground;
-
-    
-
+  background: $colorOnBackground
 
 }
