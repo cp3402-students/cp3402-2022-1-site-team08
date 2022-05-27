@@ -1,3 +1,5 @@
+**Files of Interest**
+
 This project incorporates a starter theme called underscores. The theme provides a solid foundation to build, customise, and style towards the required preferences. Underscores is made up of many different files but for our project only certain file should typically be necessary to utilize.
 
 **These files include:**
@@ -10,7 +12,7 @@ This project incorporates a starter theme called underscores. The theme provides
 
 The site uses Sass to style our theme. Incorporating Sass introduced another file structure into the themes project folder. Within Sass, separate components and concepts are moved to different files which should be intuitive. All Sass code is contained within the `sass/` folder and is compiled into the `style.css`. This can be done by installing the Sass compiler and running `sass -w sass:.` from within the `underscores/` directory.
 
-**Relevant information about what features your theme has**
+**Theme Features**
 
 We added a custom menu to the footer. We also included widgets to header to allow for social media integration.
 

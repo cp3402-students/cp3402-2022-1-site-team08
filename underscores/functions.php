@@ -49,7 +49,7 @@ function underscores_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'underscores' ),
+			'menu-1' => esc_html__( 'Navigation Menu', 'underscores' ),
 		)
 	);
 
@@ -176,14 +176,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/** Custom Widget section for Header */
 function wpb_widgets_init() {
 
     register_sidebar( array(
-        'name'          => 'Custom Header Widget Area',
-        'id'            => 'custom-header-widget',
-        'before_widget' => '<div class="chw-widget">',
+        'name'          => 'Header',
+        'id'            => 'header-widget',
+        'before_widget' => '<div class="hw-widget">',
         'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="chw-title">',
+        'before_title'  => '<h2 class="hw-title">',
         'after_title'   => '</h2>',
     ) );
 
@@ -193,8 +194,8 @@ add_action( 'widgets_init', 'wpb_widgets_init' );
 function wpb_custom_new_menu() {
 	register_nav_menus(
 	  array(
-		'my-custom-menu' => __( 'My Custom Menu' ),
-		'extra-menu' => __( 'Extra Menu' )
+		'header-menu' => __( 'Header Menu' ),
+		'footer-menu' => __( 'Footer' )
 	  )
 	);
   }
