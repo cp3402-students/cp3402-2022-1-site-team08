@@ -1,6 +1,6 @@
 This project incorporates a starter theme called underscores. The theme provided our group a solid foundation to build, customise and style towards our required preferences. Underscores is made up of many different files but for our project only certain file were necessary to utilize. 
 
-These files include:
+**These files include:**
 
 **footer.php** – Added code to specify where custom menu could be placed.
 
@@ -10,7 +10,7 @@ These files include:
 
 The group additionally employed SASS to style our theme. Incorporating SASS introduced another file structure into the themes project folder. Within Sass, the group had access to files required to manipulate and style the theme. 
 
-These files include:
+**These files include:**
 
 **footer.scss** – Added code to style custom navigation menu
  
