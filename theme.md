@@ -1,5 +1,3 @@
-**Files that would need editing**
-
 This project incorporates a starter theme called underscores. The theme provided our group a solid foundation to build, customise and style towards our required preferences. Underscores is made up of many different files but for our project only certain file were necessary to utilize. 
 
 These files include:
