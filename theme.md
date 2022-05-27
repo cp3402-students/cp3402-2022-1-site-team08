@@ -1,4 +1,3 @@
-TODO: Create documentation for theme specs and basic instructions for continual development.
 This project incorporates a starter theme called underscores. The theme provided our group a solid foundation to build, customise and style towards our required preferences. Underscores is made up of many different files but for our project only certain file were necessary to utilize. These files include:
  **footer.php** – Added code to specify where menu should be placed.
  **functions.php** – Added code to access custom navigation menu.
